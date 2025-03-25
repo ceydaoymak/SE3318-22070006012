@@ -8,7 +8,10 @@ public class WizardExam {
     public WizardExam(List<String> requiredSpells) {
         this.requiredSpells = requiredSpells;
     }
-
+    /**
+     * @requires student != null
+     * @effects returns true if student knows all required spells
+     */
     public boolean pass(HogwartsStudent student) {
         return requiredSpells.stream().allMatch(student::knowsSpell);
     }

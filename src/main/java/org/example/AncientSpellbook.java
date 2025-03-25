@@ -14,11 +14,17 @@ public class AncientSpellbook {
     public void addSpell(String spell) {
         if (spell != null) spells.add(spell);
     }
-
+    /**
+     * Requires: index >= 0 && index < spells.size()
+     * Effects: Returns the spell at the specified index.
+     */
     public String getSpell(int index) {
         return spells.get(index);
     }
-
+    /**
+     * Requires: prefix != null
+     * Effects: Returns a list of spells that start with the given prefix.
+     */
 
     public List<String> getSpellsByPrefix(String prefix) {
         return spells.stream()
